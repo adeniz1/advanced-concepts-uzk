@@ -1,3 +1,5 @@
+package homework2.exercise1;
+
 class Book extends Publication {
     private String author ;
 

@@ -1,3 +1,5 @@
+package homework2.exercise1;
+
 public class Publication {
     private String title;
     private int year;
