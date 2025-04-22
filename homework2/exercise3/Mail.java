@@ -9,19 +9,19 @@ public class Mail {
     private LocalDateTime datetime;
     private boolean isRead;
 
-    public Mail(String senderAdress, String subject, String message) {
+    public Mail(String senderAdress, String subject, String message, LocalDateTime dateTime, boolean isRead) {
         this.senderAdress = senderAdress;
         this.subject = subject;
         this.message = message;
-        this.datetime = LocalDateTime.now();
-        this.isRead = false;
+        this.datetime = dateTime;
+        this.isRead = isRead;
     }
     public void markAsRead() {
         this.isRead = true;
     }
 
     public String getMailHeader() {
-        return this.subject + " from" + this.senderAdress + " on " + this.datetime + ": " + this.message ;
+        return this.isRead ? "[READ]" : "[UNREAD]" + this.subject + " from" + this.senderAdress + " on " + this.datetime + ": " + this.message ;
     }
     public String getSenderAdress() {
         return senderAdress;
