@@ -10,4 +10,12 @@ class Textbook extends Book {
     public String getInfo() {
         return super.getInfo() + ", Subject: " + subject;
     }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 }
