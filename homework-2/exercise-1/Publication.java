@@ -1,4 +1,4 @@
-public class Publicaton {
+public class Publication {
     String title;
     int year;
 
@@ -7,7 +7,7 @@ public class Publicaton {
         this.year = year;
     }
 
-    getInfo() {
+    String getInfo() {
         return "Title: " + title + ", published in " + year;
     }
 

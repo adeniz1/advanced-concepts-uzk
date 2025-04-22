@@ -1,10 +1,9 @@
 class Textbook extends Book {
     private String subject;
 
-    public Textbook(String title, String author, String subject, int edition) {
-        super(title, author);
+    public Textbook(String title, int year, String author, String subject) {
+        super(title, year, author);
         this.subject = subject;
-        this.edition = edition;
     }
 
     @Override
