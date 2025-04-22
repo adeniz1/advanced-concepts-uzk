@@ -26,9 +26,9 @@ public class Inbox {
         int i = 0 ;
         for (Mail mail : mails) {
             System.out.println("Mail Number " + i);
-            System.out.println("isRead? " + mail.isRead() + " " 
-            + mail.getSubject() + " " + mail.getSenderAdress() 
-            + " " + mail.getDatetime() + " " + mail.getMessage());
+            System.out.println("isRead? " + mail.isRead() + " " + "Subject: " 
+            + mail.getSubject() + " " + "Sender: " + mail.getSenderAdress() 
+            + " " + "Datetime: " + mail.getDatetime() + " " + "Message: " + mail.getMessage());
             i+=1;
         }
     }
@@ -39,6 +39,7 @@ public class Inbox {
         }
         Mail mail = mails.get(index);
         mail.markAsRead(); // Mark the mail as read
+        System.out.println("Mail opened: " + mail.getMailHeader());
         return mail;
     }
 
@@ -51,6 +52,4 @@ public class Inbox {
         }
         return count;
     }
-
-    
 }

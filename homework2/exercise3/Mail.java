@@ -21,7 +21,7 @@ public class Mail {
     }
 
     public String getMailHeader() {
-        return this.isRead ? "[READ]" : "[UNREAD]" + this.subject + " from" + this.senderAdress + " on " + this.datetime + ": " + this.message ;
+        return "isRead? " + this.isRead + " " + this.subject + " " +  " from" + this.senderAdress + " on " + this.datetime + ": " + this.message ;
     }
     public String getSenderAdress() {
         return senderAdress;
@@ -53,7 +53,5 @@ public class Mail {
     public void setRead(boolean isRead) {
         this.isRead = isRead;
     }
-    
-
     
 }
