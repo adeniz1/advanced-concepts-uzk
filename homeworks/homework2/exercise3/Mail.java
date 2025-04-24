@@ -14,7 +14,7 @@ public class Mail {
         this.subject = subject;
         this.message = message;
         this.datetime = dateTime;
-        this.isRead = isRead;
+        this.isRead = false;
     }
     public void markAsRead() {
         this.isRead = true;
