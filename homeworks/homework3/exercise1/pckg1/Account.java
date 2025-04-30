@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Account {
     public String owner;
     private double balance;
-    protected int pin;
-    String internalNote;
+    protected int pin; //protected, so it can be accessed by subclasses and classes in the same package
+    String internalNote; // package private, so it can be accessed by classes in the same package
 
     public Account(String owner, double balance, int pin) {
         this.owner = owner;
