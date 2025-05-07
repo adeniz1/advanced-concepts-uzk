@@ -2,20 +2,22 @@ package inClassExercises.sheet2.exercise2;
 
 import java.util.ArrayList;
 
-public class Student extends Person{
+public class Student extends Person {
 
     private int matNumber ;
+    private int age;
     private int semester ;
 
     private ArrayList<String> courses ;
 
     
 
-    public Student(String firstName, String lastName, int matNumber, int semester, ArrayList<String> courses) {
+    public Student(String firstName, String lastName, int age ,int matNumber, int semester) {
         super(firstName, lastName, semester);
         this.matNumber = matNumber;
+        this.age=age;
         this.semester = semester;
-        this.courses = courses;
+        this.courses = new ArrayList<>();
     }
 
     public void addCourse(String course) {
@@ -32,7 +34,7 @@ public class Student extends Person{
 
     @Override
     public String getInfo() {
-        return super.getInfo() + " Matriculation Number: " + this.matNumber + " Semester: " + this.semester + " Courses: " + this.courses ;
+        return "Student : " + super.getInfo() + " Matriculation Number: " + this.matNumber + " Semester: " + this.semester + " Courses: " + this.courses ;
     }
 
     public int getMatNumber() {

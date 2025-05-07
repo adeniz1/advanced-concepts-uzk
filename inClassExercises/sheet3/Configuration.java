@@ -10,7 +10,6 @@ public class Configuration {
         this.appName = appName;
         this.modules = modules;
     }   
-    
 
     final void describe() {
         System.out.println("Info:");

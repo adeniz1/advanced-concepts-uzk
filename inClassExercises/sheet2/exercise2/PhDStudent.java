@@ -1,21 +1,17 @@
 package inClassExercises.sheet2.exercise2;
 
-import java.util.ArrayList;
 
 public class PhDStudent extends Student {
 
     private String dissTopic;
 
-    
 
-
-    public PhDStudent(String firstName, String lastName, int matNumber, int semester, ArrayList<String> courses) {
-        super(firstName, lastName, matNumber, semester, courses);
-        
+    public PhDStudent(String firstName, String lastName, int age, int matNumber, int semester) {
+        super(firstName, lastName, age, matNumber, semester);  
     }
 
     public String getInfo() {
-        return super.getInfo() + " Dissertation Topic: " + this.dissTopic;
+        return "Phd Student: " + super.getInfo() + " Dissertation Topic: " + this.dissTopic;
 
     }
 

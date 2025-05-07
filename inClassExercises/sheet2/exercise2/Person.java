@@ -1,5 +1,7 @@
 package inClassExercises.sheet2.exercise2;
 
+import java.util.ArrayList;
+
 public class Person {
 
     private String firstName ;
@@ -15,8 +17,9 @@ public class Person {
     }
 
     public String getInfo() {
-        return "Firstname: " + this.firstName 
+        return "Person: " + "Firstname: " + this.firstName 
         + " Lastname: " + this.lastName + "Age: " + this.age ;
+
     }
     public String getFirstName() {
         return firstName;
