@@ -1,4 +1,4 @@
-package inClassExercises.sheet4;
+package inClassExercises.sheet4.exercise1;
 
 public class WrapperTask {
 
