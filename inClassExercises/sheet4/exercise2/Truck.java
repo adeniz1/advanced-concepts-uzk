@@ -1,23 +1,31 @@
 package inClassExercises.sheet4.exercise2;
 
 public class Truck extends Vehicle implements Refuelable {
+    private double fuelLevel;
 
 // TODO: add attributes , constants and implement required methods
 public Truck(String id, double maxLoad, double tankCapacity) {
     super(id, maxLoad);
-    // TODO: initialise attributes
-    }
-
+    this.fuelLevel=tankCapacity;
+}
 @Override
 public void refuel(double liters) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'refuel'");
+    if(fuelLevel+liters < maxLoad) {
+        fuelLevel+=liters ;
+    } else {
+        double rest = maxLoad-fuelLevel;
+        fuelLevel+=rest;
+    }
 }
 
 @Override
 public double getFuelLevel() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getFuelLevel'");
+   return this.fuelLevel ;
+}
+
+@Override
+protected double getRange() {
+    return maxLoad;
 }
     
 }
