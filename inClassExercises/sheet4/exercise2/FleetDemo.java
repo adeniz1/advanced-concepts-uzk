@@ -8,9 +8,11 @@ public class FleetDemo {
 
         System.out.println(truck1.getFuelLevel());
         truck1.canReach(300);
+        truck1.refuel(400);
+        System.out.println(truck1.getFuelLevel());
         truck1.refuel(100);
         System.out.println(truck1.getFuelLevel());
-        //etwas funktioniert nicht
+        
 
     }
 }

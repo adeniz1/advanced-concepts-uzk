@@ -1,20 +1,22 @@
 package inClassExercises.sheet4.exercise2;
 
 public class Truck extends Vehicle implements Refuelable {
-    private double fuelLevel;
+    private double fuelLevel; //Füllstand
+    private double tankCapacity; //Kapazität
+    private double consumptionPerKm ; //liter/km
 
-// TODO: add attributes , constants and implement required methods
 public Truck(String id, double maxLoad, double tankCapacity) {
-    super(id, maxLoad);
-    this.fuelLevel=tankCapacity;
+    super(id, maxLoad); //maxload ist kg
+    this.tankCapacity=tankCapacity;
+    this.fuelLevel = 0 ;
+    this.consumptionPerKm = 0.3 ;
 }
 @Override
 public void refuel(double liters) {
-    if(fuelLevel+liters < maxLoad) {
+    if(fuelLevel+liters <= tankCapacity) {
         fuelLevel+=liters ;
     } else {
-        double rest = maxLoad-fuelLevel;
-        fuelLevel+=rest;
+        fuelLevel = tankCapacity ;
     }
 }
 
@@ -24,8 +26,9 @@ public double getFuelLevel() {
 }
 
 @Override
+// wie weit kommt man mit fuelLevel noch?
 protected double getRange() {
-    return maxLoad;
+    return this.fuelLevel / consumptionPerKm ;
 }
     
 }
