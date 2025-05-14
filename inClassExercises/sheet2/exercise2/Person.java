@@ -1,7 +1,5 @@
 package inClassExercises.sheet2.exercise2;
 
-import java.util.ArrayList;
-
 public class Person {
 
     private String firstName ;
