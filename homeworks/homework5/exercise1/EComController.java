@@ -10,5 +10,8 @@ public class EComController {
         System.out.println("Shipping to: " +
             customer.getProfile().getInfo().getCity());
 
+        //Lösung um Law of Demeter nicht zu brechen
+        System.out.println(customer.getShippingCity());
+
     }
 }
