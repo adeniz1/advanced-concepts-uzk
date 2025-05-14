@@ -1,7 +1,6 @@
 package homework5.exercise1;
 
 import homework5.exercise2.InvalidShippingInfoException;
-import homework5.exercise2.MissingShippingInfoException;
 
 public class ShippingInfo {
 
