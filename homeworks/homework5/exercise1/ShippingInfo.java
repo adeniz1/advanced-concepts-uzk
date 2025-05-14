@@ -1,5 +1,8 @@
 package homework5.exercise1;
 
+import homework5.exercise2.InvalidShippingInfoException;
+import homework5.exercise2.MissingShippingInfoException;
+
 public class ShippingInfo {
 
     private String city ;
@@ -8,7 +11,10 @@ public class ShippingInfo {
 
     //Constructor
 
-    public ShippingInfo(String city, int zip, String country) {
+    public ShippingInfo(String city, int zip, String country) throws InvalidShippingInfoException {
+        if(city == "" || zip < 0 ) {
+            throw new InvalidShippingInfoException("invalid zip or city") ;
+        }
         this.city = city;
         this.zip = zip;
         this.country = country;

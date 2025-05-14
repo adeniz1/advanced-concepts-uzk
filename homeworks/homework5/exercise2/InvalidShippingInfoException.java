@@ -1,5 +1,8 @@
 package homework5.exercise2;
 
-public class InvalidShippingInfoException {
+public class InvalidShippingInfoException extends Exception {
+    public InvalidShippingInfoException(String message){
+        super(message);
+    }
     
 }

@@ -1,5 +1,7 @@
 package homework5.exercise1;
 
+import homework5.exercise2.MissingShippingInfoException;
+
 public class Profile {
     
     //Dependency Injection
@@ -11,7 +13,10 @@ public class Profile {
         return info.getCity() ;
     }
     
-    public Profile(ShippingInfo info) {
+    public Profile(ShippingInfo info) throws MissingShippingInfoException {
+        if(info == null) {
+            throw new MissingShippingInfoException("Shippinginfo is missing");
+        }
         this.info = info;
     }
 

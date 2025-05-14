@@ -1,5 +1,11 @@
 package homework5.exercise2;
 
-public class MissingShippingInfoException {
+public class MissingShippingInfoException extends Exception {
+
+    public MissingShippingInfoException(String message){
+        super(message);
+    }
+
+
     
 }

@@ -1,5 +1,7 @@
 package homework5.exercise1;
 
+import homework5.exercise2.InvalidCustomerException;
+
 public class Customer {
     
     //Dependency Injection
@@ -10,7 +12,7 @@ public class Customer {
     private int id ;
 
     //Constructor
-    public Customer(Profile profile, int id) {
+    public Customer(Profile profile, int id) throws InvalidCustomerException {
         this.profile = profile;
         this.id = id;
     }
