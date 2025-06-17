@@ -14,8 +14,10 @@ import homeworks.homework8.exercise1.Shape;
 
 public class PersistentShapeManager {
  public static void saveShapesToFile(Collection<? extends Shape> shapes, String filename) {
+    //BufferedWriter schreibt in eine Datei namens filename
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
             for (Shape shape : shapes) {
+                //.write() schreibt in eine Datei
                 writer.write(shape.toString());
                 System.out.println("Wird gespeichert: " + shape.toString());
                 writer.newLine();
@@ -33,6 +35,7 @@ public class PersistentShapeManager {
 
             while ((line = reader.readLine()) != null) {
                 try {
+                    //line wird gelesen und der STring davon der Methode .fromString zurückgegeben
                     Shape shape = ShapeFactory.fromString(line);
                     shapes.add(shape);
                 } catch (IllegalArgumentException e) {
