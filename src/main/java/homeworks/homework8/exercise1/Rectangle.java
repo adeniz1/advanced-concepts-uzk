@@ -2,11 +2,11 @@ package homeworks.homework8.exercise1;
 
 public class Rectangle extends Shape {
 
-    private int width ;
-    private int length;
+    private double width ;
+    private double length;
 
 
-    public Rectangle(int width, int length) {
+    public Rectangle(double width, double length) {
         this.width = width;
         this.length = length;
     }
@@ -17,8 +17,9 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle" ;
+        return "Rectangle: width=" + width + ", length=" + length;
     }
+
     
     
 }
