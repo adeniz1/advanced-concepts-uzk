@@ -29,6 +29,7 @@ public class GuessTheNumber {
         } else {
             System.out.println("You lose. :( Pls try again.");
         }
+        scanner.close();
     }
     
 }
